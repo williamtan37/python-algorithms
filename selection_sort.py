@@ -1,16 +1,16 @@
 def swap(L, left, right):
-	L[left], L[right] = L[right], L[left]
+    L[left], L[right] = L[right], L[left]
 
 '''In-place, does not use extra memory, uses O(1) memory, no auxiliary data structure. not stable, does
 not preserve relative order but it can be implemented as stable, if instead of swapping the minimum values 
 is inserted into the correct position and elements are moved down.'''
 def selection_sort(L):
-	for target_index in range(len(L)-1):
-		smallest_index = target_index
-		for find_index in range(target_index+1, len(L)):
-			if L[find_index] < L[smallest_index]:
-				smallest_index = find_index
-		swap(L, target_index, smallest_index)
+    for target_index in range(len(L)-1):
+        smallest_index = target_index
+        for find_index in range(target_index+1, len(L)):
+            if L[find_index] < L[smallest_index]:
+                smallest_index = find_index
+        swap(L, target_index, smallest_index)
 
 
 

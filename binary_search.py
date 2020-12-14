@@ -1,25 +1,25 @@
 def recur_binary_search(L, target_val, low, high):
-	if high >= low:
-		median_index = (low + high) // 2
-		if L[median_index] == target_val:
-			return median_index
-		elif L[median_index] < target_val:
-			return recur_binary_search(L, target_val, low, median_index - 1)
-		else:
-			return recur_binary_search(L, target_val, median_index + 1, high)
-	else:
-		return -1
+    if high >= low:
+        median_index = (low + high) // 2
+        if L[median_index] == target_val:
+            return median_index
+        elif L[median_index] < target_val:
+            return recur_binary_search(L, target_val, low, median_index - 1)
+        else:
+            return recur_binary_search(L, target_val, median_index + 1, high)
+    else:
+        return -1
 
 def iter_binary_search(L, target_val, low, high):
-	while high >= low:
-		median_index = (low + high) // 2
-		if L[median_index] == target_val:
-			return median_index
-		elif L[median_index] < target_val:
-			low = median_index + 1
-		else:
-			high = median_index - 1
-	return -1
+    while high >= low:
+        median_index = (low + high) // 2
+        if L[median_index] == target_val:
+            return median_index
+        elif L[median_index] < target_val:
+            low = median_index + 1
+        else:
+            high = median_index - 1
+    return -1
 
 L = [0,1,2,3,4,5,6,7,8,9,10]
 L_edge_case1 = [0]
