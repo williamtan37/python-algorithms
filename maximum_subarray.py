@@ -8,7 +8,8 @@ This one is:
 Time: O(N), Space: O(N). 
 Use the information gained from solving past steps to solve your current step because it is more efficient.
 The max subarray ending at a given index is either the value at the index itself 
-or it is the value at the index itself + the max subarray ending at the index before, depending on which is greater.  
+or it is the value at the index itself + the max subarray ending at the index before, depending on which is greater. 
+At each step you are asking what is the max subarray ending at this index? 
 Basically is a really smart way to compute a contigious subarray indirectly. Computing subarrays directly
 will be less efficient. 
 '''
