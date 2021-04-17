@@ -1,5 +1,5 @@
 '''
-In-place alogorithm, with sorted list on left and unsorted list on right.
+In-place stable alogorithm, with sorted list on left and unsorted list on right.
 Maintains sorted list on the left. Naturally, first index is already sorted.
 From the unsorted list on the right, from index 1 to end, insert unsorted value into sorted list from the end of the sorted list.
 This is done by, starting from the end of the sorted list, shifting values in the sorted list that are bigger than curr up by one index. This also overwrites curr.
