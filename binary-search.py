@@ -1,3 +1,23 @@
+'''
+T  = O(logN)
+S for iter = O(1)
+S for recur = O(logN) -> used by stack memory, for langauges (Python) that don't support tail recurison optimization.
+S for recur = O(1) for langauges that support tail recursion optimization.
+
+
+----WHAT IS TAIL RECURSION?----
+Same subroutine call performed as the final action of a precedure.
+It is only important that the calling function return immediately after the tail call.
+----WHY IS THIS IMPORTANT?----
+With tail recursion optimization, the compiler can optimize memory.
+Tail calls can be implemented without adding a new stack frame to the call stack.
+Most of the frame of the current procedure is not needed, and can be replaced by frame of new tail call. 
+Since the recursive call is the last statement, there is nothing to do in the current function,
+so saving the current functions stack frame is no use.
+
+Look at link for difference between the two types of factorial for use of tail recursion.
+https://www.geeksforgeeks.org/tail-recursion/
+'''
 def recur_binary_search(L, target_val, low, high):
     if high >= low:
         #median_index = (low + high) // 2
